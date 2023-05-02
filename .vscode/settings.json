@@ -1,0 +1,10 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorCustomizations": {
+    
+    },
+    "workbench.view.alwaysShowHeaderActions": false,
+    "explorer.decorations.colors": true,
+    "explorer.decorations.badges": true,
+    "explorer.fileNesting.enabled": false
+}

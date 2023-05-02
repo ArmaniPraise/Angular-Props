@@ -1,0 +1,28 @@
+<div *ngif="selectedProduct">
+    <h1>{{selectedProduct.name}}</h1>
+    <p>{{selectedProduct.category}}</p>
+    <p>{{selectedProduct.price}}</p>
+    <p>{{selectedProduct.Action}}</p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>category</th>
+            <th>price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of products">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.price}}</td>
+            <td><button [class.btn-secondary]="toggled && toToggle === item.id" class="btn btn primary" (click)="toggleColor(item.id)">toggle</button></td>
+            
+        </tr>
+    </tbody>
+</table>
