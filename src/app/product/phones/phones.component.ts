@@ -12,6 +12,12 @@ export class PhonesComponent {
 
   toggled:boolean = false;
 
+  selectedProduct:any = {};
+
+  toToggle:any;
+
+  loading:boolean = true;
+
 
   constructor(private dataService:DataService){}
 
@@ -24,9 +30,11 @@ export class PhonesComponent {
       next:(res)=>{
         this.products = res;
         console.log(this.products);
+        this.loading = false;
       },
       error:(err)=>{
         console.log(err);
+        this.loading = false;
       }
     })
   }
