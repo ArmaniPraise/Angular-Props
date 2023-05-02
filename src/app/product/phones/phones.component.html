@@ -1,9 +1,11 @@
-<div *ngif="selectedProduct">
+<div *ngIf="selectedProduct.name === 'name 1'">
     <h1>{{selectedProduct.name}}</h1>
     <p>{{selectedProduct.category}}</p>
     <p>{{selectedProduct.price}}</p>
     <p>{{selectedProduct.Action}}</p>
 </div>
+
+<div></div>
 
 <table class="table">
     <thead>
@@ -21,7 +23,7 @@
             <td>{{item.name}}</td>
             <td>{{item.category}}</td>
             <td>{{item.price}}</td>
-            <td><button [class.btn-secondary]="toggled && toToggle === item.id" class="btn btn primary" (click)="toggleColor(item.id)">toggle</button></td>
+            <td><button [class.btn-secondary]="toggled && toToggle === item.id" class="btn btn-primary" (click)="toggleColor(item)">toggle</button></td>
             
         </tr>
     </tbody>

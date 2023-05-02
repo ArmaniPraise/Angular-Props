@@ -40,9 +40,9 @@ export class PhonesComponent {
   }
 
   toggleColor(id:any){
-    this.toggled = !this.toggled;
+  //   this.toggled = !this.toggled;
 
-   this.toToggle = id;
+  //  this.toToggle = id;
    this.selectedProduct = id;
   }
 }
